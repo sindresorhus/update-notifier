@@ -3,8 +3,8 @@
 	"version": "7.3.1",
 	"description": "Update notifications for your CLI app",
 	"license": "BSD-2-Clause",
-	"repository": "yeoman/update-notifier",
-	"funding": "https://github.com/yeoman/update-notifier?sponsor=1",
+	"repository": "sindresorhus/update-notifier",
+	"funding": "https://github.com/sponsors/sindresorhus",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",

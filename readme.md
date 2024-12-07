@@ -152,7 +152,7 @@ Defer showing the notification until after the process has exited.
 ##### message
 
 Type: `string`\
-Default: [See above screenshot](https://github.com/yeoman/update-notifier#update-notifier-)
+Default: [See above screenshot](#update-notifier-)
 
 Message that will be shown when an update is available.
 
