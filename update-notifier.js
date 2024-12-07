@@ -38,6 +38,7 @@ export default class UpdateNotifier {
 		this.#options = options;
 		options.pkg ??= {};
 		options.distTag ??= 'latest';
+		options.printFn ??= console.error;
 
 		// Reduce pkg to the essential keys. with fallback to deprecated options
 		// TODO: Remove deprecated options at some point far into the future
@@ -76,7 +77,7 @@ export default class UpdateNotifier {
 					+ chalk.cyan(format(' sudo chown -R $USER:$(id -gn $USER) %s ', xdgConfig));
 
 				process.on('exit', () => {
-					console.error(boxen(message, {textAlignment: 'center'}));
+					options.printFn(boxen(message, {textAlignment: 'center'}));
 				});
 			}
 		}
@@ -165,10 +166,10 @@ export default class UpdateNotifier {
 		);
 
 		if (options.defer === false) {
-			console.error(message);
+			options.printFn(message);
 		} else {
 			process.on('exit', () => {
-				console.error(message);
+				options.printFn(message);
 			});
 		}
 
